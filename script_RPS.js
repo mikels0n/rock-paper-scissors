@@ -11,7 +11,7 @@ function getComputerChoice() {
 }
 
 const computerSelection = getComputerChoice();
-const playerSelection = "rock";
+const playerSelection = prompt("Rock, paper or scissors?").toLowerCase();
 
 function playRound(playerSelection,computerSelection) {
 
@@ -43,4 +43,3 @@ function playRound(playerSelection,computerSelection) {
     }
 }
 
-console.log(playRound(playerSelection,computerSelection));
