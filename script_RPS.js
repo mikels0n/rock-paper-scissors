@@ -3,7 +3,9 @@ let computerScore = 0;
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
-const result = document.querySelector(".result")
+const result = document.querySelector(".result");
+const score = document.querySelector(".score");
+score.textContent = playerScore + ":" + computerScore;
 
 function getComputerChoice() {
     let rndNumber = Math.floor(Math.random()*3);
@@ -52,10 +54,14 @@ rock.addEventListener('click', () => {
     result.innerHTML = "";
     switch (varResult) {
         case 3:
+            playerScore++;
             result.textContent = "You WON!";
+            score.textContent = playerScore + ":" + computerScore;
             break;
         case 1:
+            computerScore++;
             result.textContent = "You LOST...";
+            score.textContent = playerScore + ":" + computerScore;
             break;
         case 2:
             result.textContent = "DRAW";
@@ -68,10 +74,14 @@ paper.addEventListener('click', () => {
     result.innerHTML = "";
     switch (varResult) {
         case 3:
+            playerScore++;
             result.textContent = "You WON!";
+            score.textContent = playerScore + ":" + computerScore;
             break;
         case 1:
+            computerScore++;
             result.textContent = "You LOST...";
+            score.textContent = playerScore + ":" + computerScore;
             break;
         case 2:
             result.textContent = "DRAW";
@@ -84,10 +94,14 @@ scissors.addEventListener('click', () => {
     result.innerHTML = "";
     switch (varResult) {
         case 3:
+            playerScore++;
             result.textContent = "You WON!";
+            score.textContent = playerScore + ":" + computerScore;
             break;
         case 1:
+            computerScore++;
             result.textContent = "You LOST...";
+            score.textContent = playerScore + ":" + computerScore;
             break;
         case 2:
             result.textContent = "DRAW";
@@ -95,4 +109,5 @@ scissors.addEventListener('click', () => {
     }
 })
 
-console.log(game());
+
+;

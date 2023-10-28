@@ -5,14 +5,13 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 95vh;
-    gap: 30px;
 }
 
 .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: 40px;
 }
 
 button {
@@ -55,8 +54,29 @@ button {
     transition-duration:0.3s;
 }
 
+img:hover {
+    width: 120px;
+    height: 120px;
+    transition-duration:0.3s;
+}
+
 img {
     width: 100px;
     height: 100px;
+    transition-duration:0.3s;
+}
+
+.result {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(70, 65, 65);
+    padding-top: 40px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.score {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(70, 65, 65);
+    padding-top: 5px;
 }
 
