@@ -29,29 +29,12 @@ button {
     transition-duration:0.3s;
 }
 
-#rock:hover {
+button:hover {
     width: 120px; 
     height: 120px; 
     box-shadow: 0 0 20px rgb(255, 251, 6); 
-    border-style: solid; border-width: 4px; 
-    border-color: rgb(255, 251, 6);
-    transition-duration:0.3s;
-}
-
-#paper:hover {
-    width: 120px; 
-    height: 120px; 
-    box-shadow: 0 0 20px rgb(255, 251, 6); 
-    border-style: solid; border-width: 4px; 
-    border-color: rgb(255, 251, 6);
-    transition-duration:0.3s;
-}
-
-#scissors:hover {
-    width: 120px; 
-    height: 120px; 
-    box-shadow: 0 0 20px rgb(255, 251, 6); 
-    border-style: solid; border-width: 4px; 
+    border-style: solid;
+    border-width: 4px; 
     border-color: rgb(255, 251, 6);
     transition-duration:0.3s;
 }
