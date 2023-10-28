@@ -1,5 +1,11 @@
 body {
     background-color: rgb(145, 225, 174);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+    gap: 30px;
 }
 
 .buttons {
@@ -7,9 +13,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 35px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
 }
 
 button {
@@ -22,6 +25,10 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.result {
+
 }
 
 img {

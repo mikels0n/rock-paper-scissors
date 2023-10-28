@@ -5,19 +5,6 @@ const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 const result = document.querySelector(".result")
 
-const win = document.createElement('div');
-win.classList.add('win');
-win.textContent = "You WON!";
-
-const lost = document.createElement('div');
-lost.classList.add('lost');
-lost.textContent = "You LOST...";
-
-const draw = document.createElement('div');
-draw.classList.add('draw');
-draw.textContent = "DRAW";
-
-
 function getComputerChoice() {
     let rndNumber = Math.floor(Math.random()*3);
     switch (rndNumber) {
@@ -62,16 +49,48 @@ function playRound(playerSelection,computerSelection) {
 
 rock.addEventListener('click', () => {
     let varResult = playRound("rock", getComputerChoice());
-     
+    result.innerHTML = "";
     switch (varResult) {
         case 3:
-            result.appendChild(win);
+            result.textContent = "You WON!";
             break;
         case 1:
-            result.appendChild(lost);
+            result.textContent = "You LOST...";
             break;
         case 2:
-            result.appendChild(draw);
+            result.textContent = "DRAW";
+            break;
+    }
+})
+
+paper.addEventListener('click', () => {
+    let varResult = playRound("paper", getComputerChoice());
+    result.innerHTML = "";
+    switch (varResult) {
+        case 3:
+            result.textContent = "You WON!";
+            break;
+        case 1:
+            result.textContent = "You LOST...";
+            break;
+        case 2:
+            result.textContent = "DRAW";
+            break;
+    }
+})
+
+scissors.addEventListener('click', () => {
+    let varResult = playRound("scissors", getComputerChoice());
+    result.innerHTML = "";
+    switch (varResult) {
+        case 3:
+            result.textContent = "You WON!";
+            break;
+        case 1:
+            result.textContent = "You LOST...";
+            break;
+        case 2:
+            result.textContent = "DRAW";
             break;
     }
 })
