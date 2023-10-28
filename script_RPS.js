@@ -95,5 +95,4 @@ scissors.addEventListener('click', () => {
     }
 })
 
-
 console.log(game());
