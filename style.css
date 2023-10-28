@@ -12,6 +12,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 40px;
+    width: 470px;
+    height: 125px;
 }
 
 button {
@@ -69,7 +71,7 @@ img {
 .result {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(70, 65, 65);
-    padding-top: 40px;
+    padding-top: 20px;
     font-size: 20px;
     font-weight: 700;
 }
