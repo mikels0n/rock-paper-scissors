@@ -55,18 +55,20 @@ rock.addEventListener('click', () => {
     switch (varResult) {
         case 3:
             playerScore++;
-            result.textContent = "You WON!";
+            result.textContent = "Point for you!";
             score.textContent = playerScore + ":" + computerScore;
             break;
         case 1:
             computerScore++;
-            result.textContent = "You LOST...";
+            result.textContent = "Point for opponent..";
             score.textContent = playerScore + ":" + computerScore;
             break;
         case 2:
-            result.textContent = "DRAW";
+            result.textContent = "Draw, score remains unchanged.";
+            score.textContent = playerScore + ":" + computerScore;
             break;
     }
+    gameOverWin();
 })
 
 paper.addEventListener('click', () => {
@@ -75,18 +77,20 @@ paper.addEventListener('click', () => {
     switch (varResult) {
         case 3:
             playerScore++;
-            result.textContent = "You WON!";
+            result.textContent = "Point for you!";
             score.textContent = playerScore + ":" + computerScore;
             break;
         case 1:
             computerScore++;
-            result.textContent = "You LOST...";
+            result.textContent = "Point for opponent..";
             score.textContent = playerScore + ":" + computerScore;
             break;
         case 2:
-            result.textContent = "DRAW";
+            result.textContent = "Draw, score remains unchanged.";
+            score.textContent = playerScore + ":" + computerScore;
             break;
     }
+    gameOverWin();
 })
 
 scissors.addEventListener('click', () => {
@@ -95,19 +99,36 @@ scissors.addEventListener('click', () => {
     switch (varResult) {
         case 3:
             playerScore++;
-            result.textContent = "You WON!";
+            result.textContent = "Point for you!";
             score.textContent = playerScore + ":" + computerScore;
             break;
         case 1:
             computerScore++;
-            result.textContent = "You LOST...";
+            result.textContent = "Point for opponent..";
             score.textContent = playerScore + ":" + computerScore;
             break;
         case 2:
-            result.textContent = "DRAW";
+            result.textContent = "Draw, score remains unchanged.";
+            score.textContent = playerScore + ":" + computerScore;
             break;
     }
+    gameOverWin();
 })
+
+function gameOverWin() {
+    if (playerScore === 3) {
+        result.innerHTML = "";
+        result.textContent = "GAME OVER! You WIN!"
+        playerScore = 0;
+        computerScore = 0;
+    }
+    if (computerScore === 3) {
+        result.innerHTML = "";
+        result.textContent = "GAME OVER! You LOSE!"
+        playerScore = 0;
+        computerScore = 0;
+    }
+}
 
 
 ;
